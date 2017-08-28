@@ -56,3 +56,20 @@
 # Lecture 10
 	Using ref with the components, you can make a hook and then using this.refs.<nameOfTheHook> you can hook it togehter. 
 
+
+# Lecture 11
+	There are various lifecycles of things:
+		componentWillMount
+		render
+		componentDidMount
+		componentWillUnmount
+
+	if you want to render a component at a node, you will do
+		ReactDOM.render(<App />, document.getElementById('a'))
+
+	and if you want to unmount a document, you do:
+		ReactDOM.unmountComponentAtNode(document.getElementById('a'))
+
+
+
+
