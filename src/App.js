@@ -3,14 +3,26 @@ import React from 'react'
 // stateful component
 class App extends React.Component {
   render() {
+      let txt = this.props.txt;
     return (
       <div>
-        <h1 classname='Halo'> Halo World </h1>
+        <h1 classname='txt'>{txt}</h1>
       </div>
+    )
     // return React.createElement('h1', null, "Hello World");
     // this is the same as the other thing
 
   }
+}
+
+App.propTypes = {
+  txt: React.PropTypes.string,
+  cat: React.PropTypes.number.isRequired
+}
+
+App.defaultProps = {
+  txt: "Default text",
+  cat: 100
 }
 export default App
 
@@ -31,3 +43,7 @@ export default App
     //  that does not take any input, you can do the following:
     // const App = () => <h1> Hello Stateless </h1>
 
+// # Lecture 4
+
+//   Setting the properties on objects and also mentionning the props that they 
+//   expect and how to pass them
