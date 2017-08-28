@@ -18,7 +18,15 @@
    Setting the properties on objects and also mentionning the props that they 
    expect and how to pass them
 
-Lecture 5
+# Lecture 5
+	props: static types and not to be changed by the component
+	state: state maintained by the component and can be mutatied
 
-props: static types and not to be changed by the component
-state: state maintained by the component and can be mutatied
+# Lecture 5
+	props: static types and not to be changed by the component
+	state: state maintained by the component and can be mutatied
+
+# Lecture 6: Use react components as hildren for other components
+	you can have a child component update the state of the parent component
+
+

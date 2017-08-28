@@ -16,8 +16,11 @@ class App extends React.Component {
       let txt = this.state.txt + '-' + this.state.cat;
     return (
       <div>
-        <input type='text' onChange={this.update.bind(this)}/>
         <h1 classname='txt'>{txt}</h1>
+        <Widget update={this.update.bind(this)} />
+        <Widget update={this.update.bind(this)} />
+        <Widget update={this.update.bind(this)} />
+        
       </div>
     )
     // return React.createElement('h1', null, "Hello World");
@@ -35,6 +38,10 @@ App.defaultProps = {
   txt: "Default text",
   cat: 100
 }
+
+
+        
+const Widget = (props) => <input type='text' onChange={props.update}/>
 export default App
 
 
