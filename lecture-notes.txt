@@ -35,3 +35,13 @@
 
 
 # Lecture 8
+	you can do more validation instead of just React.propTypes
+	by making a function of component.propTypes and then having functions
+	inside of that with 
+
+
+	text(props, propName, components) {
+		if (!(propName in props)) {
+			return new Error("FML what would I do without that property")
+		}
+	}
