@@ -45,3 +45,9 @@
 			return new Error("FML what would I do without that property")
 		}
 	}
+
+
+Lecture 9
+	If you want to evaluate the string before passing it, use the tilde key '
+	in the constructor(), you call super() to get the context
+	how to have various events tied to something
