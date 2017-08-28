@@ -4,18 +4,20 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Button> I <Heart /> React </Button>
+        <Title />
       </div>
       )
   }
 }
 
 
-const Button = (props) => <button> {props.children} </button>
+const Title = (props) => <h1> Title {props.text} </h1>
 
-class Heart extends React.Component {
-  render() {
-    return <span>&hearts;</span>    
+Title.propTypes = {
+  text(props, propName, component) {
+    if (!(propName in props)) {
+      return new Error(`wtf no text! what am I supposed to do now. Give me ${propName}`);
+    }
   }
 }
 export default App
