@@ -4,35 +4,34 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentEvent: "------"
+      a: "",
+      b: ""
     }
 
     this.update = this.update.bind(this);
 
   }
 
-  update(e) {
+  update() {
     this.setState({
-      currentEvent: e.type
+      a: this.refs.a.value,
+      b: this.b.value
     })
   }
   render() {
     return (
       <div>
-      <textarea
-        onKeyPress={this.update}
-        onCopy={this.update}
-        onCut={this.update}
-        onPaste={this.update}
-        onFocus={this.update}
-        onBlur={this.update}
-        onDoubleClick={this.update}
-        onTouchMove={this.update}
-        onTouchEnd={this.update}
-        cols='30'
-        rows='10'
-         />
-        <h1> {this.state.currentEvent} </h1>
+        <input
+          ref='a'
+          type='text'
+          onChange={this.update.bind(this)}
+          / > {this.state.a}
+
+        <input
+          ref={ (harry_potter) => this.b = harry_potter}
+          type='text'
+          onChange={this.update.bind(this)}
+          / > {this.state.b}
       </div>
       )
   }

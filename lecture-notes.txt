@@ -47,7 +47,12 @@
 	}
 
 
-Lecture 9
+# Lecture 9
 	If you want to evaluate the string before passing it, use the tilde key '
 	in the constructor(), you call super() to get the context
 	how to have various events tied to something
+
+
+# Lecture 10
+	Using ref with the components, you can make a hook and then using this.refs.<nameOfTheHook> you can hook it togehter. 
+
