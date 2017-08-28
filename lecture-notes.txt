@@ -29,4 +29,9 @@
 # Lecture 6: Use react components as hildren for other components
 	you can have a child component update the state of the parent component
 
+# Lecture 7: access nested data wtih Reacts props.children
+	if you want to access the inner children, do it by using the props.children 
+	this belongs to the props part since we are getting this static information and we should not be changing it. 
 
+
+# Lecture 8
