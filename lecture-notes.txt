@@ -90,3 +90,6 @@
 # Lecture 14 
 	How to make asynchronous calls and use the map functionality of JS to deal with arrays of data
 
+# Lecture 15
+	How to use the map and the filter method and how to create dynamic components from JS
+	
