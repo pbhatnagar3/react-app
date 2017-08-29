@@ -1,62 +1,40 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      value:0
+      items: [],
+      filter: ''
     }
-    this.update = this.update.bind(this);
   }
-
-  update() {
-    this.setState({
-      value: this.state.value +1
-    })
-  }
-
 
   componentWillMount() {
-    console.log("componentWillMount");
+    fetch('http://swapi.co/api/people/?format=json')
+      .then( (response) => response.json())
+      .then( ({results: items}) => this.setState({items}))
   }
 
-  render() {
-    console.log('render');
-    return (
-      <div>
-        <button onClick={this.update}>{this.state.value} </button>
-      </div>
-      )
+  update(e) {
+    this.setState({filter: e.target.value});
   }
 
-    componentDidMount() {
-    console.log("componentDidMount");
-  }
-
-
-    componentWillUnmount() {
-      console.log("componentWillUnMount");
+  render(){
+    let items = this.state.items
+    if (this.state.filter) {
+      items = items.filter((item) => item.name.toLowerCase().includes(this.state.filter.toLowerCase()))
     }
-}
-
-class Wrapper extends React.Component {
-  mount() {
-    ReactDOM.render(<App />, document.getElementById('a'));
-  }
-
-  UnMount() {
-    ReactDOM.unmountComponentAtNode(document.getElementById('a'));
-  }
-  render() {
     return (
       <div>
-        <button onClick={this.mount.bind(this)}> Mount </button>
-        <button onClick={this.UnMount.bind(this)}> UnMount </button>
-        <div id='a'> </div>
+        <input type='text' onChange={this.update.bind(this)} />
+        {items.map((item) => <Person person={item} key={item.name}/>)}
       </div>
+
     )
   }
 }
 
-export default Wrapper;
+
+const Person = (props) => <h4>{props.person.name} </h4>
+
+export default App;

@@ -71,5 +71,22 @@
 		ReactDOM.unmountComponentAtNode(document.getElementById('a'))
 
 
+# Lecture 12 
+	when you are working with lifecycles, remember that 
+		componentWillMount: will have access to the state and the props but not the DOM element since it has not been mounted
+		componentDidMount: will have access to the DOM element as well
+		Make sure that when you are setting an interval, you are removing it too
 
+
+# Lecture 13
+	How to control react components updates when the new props are received
+		componentWillReceiveProps(nextProps)
+		shouldComponentUpdate(nextProps, nextState)
+		componentDidUpdate(preProps, prevState);
+
+
+
+
+# Lecture 14 
+	How to make asynchronous calls and use the map functionality of JS to deal with arrays of data
 
