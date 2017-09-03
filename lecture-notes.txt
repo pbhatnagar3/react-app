@@ -92,10 +92,10 @@
 
 # Lecture 15
 	How to use the map and the filter method and how to create dynamic components from JS
-	
-
-# Lecture 16
 	How to do inheritece using HOC and then share the data
 	remember that the main funcion of the HOC is to return the innerComponent 
 		but make sure that the innerComponent has the correct props and state
 		passed to them
+
+
+# Lecture 16

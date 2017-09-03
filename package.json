@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "css-loader": "^0.28.7",
     "react": "^15.6.1",
+    "react-css-modules": "^4.7.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.12"
+    "react-scripts": "1.0.12",
+    "style-loader": "^0.18.2"
   },
   "scripts": {
     "start": "react-scripts start",
