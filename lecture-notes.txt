@@ -99,3 +99,21 @@
 
 
 # Lecture 16
+	making a life JSX transformer
+
+
+# Lecture 17
+	understanding JSX. 
+	third argument is the this.props.children
+	children is the second argument passed
+	and if you want the href or any tags to have custom tags, you need to prepend with `data-`
+	if statements are not supported well. Use ternary
+	interpolation makes sense
+
+Lecture 18: udnerstanding React.Children
+	we can use this.props.children.map
+	but if there is only one children, this will throw an error, so we can use the React.Children.map(this.props.children, child -> console.log(child.props.className))
+	React.Children.map(this.props.children, child => console.log(child))
+	React.Children.toArray(this.props.children)
+	React.Children.forEach(this.props.children, child => console.log(child.props.className))
+	React.Children.only(this.props.children) // expects only a single child
