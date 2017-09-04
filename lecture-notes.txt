@@ -117,3 +117,9 @@ Lecture 18: udnerstanding React.Children
 	React.Children.toArray(this.props.children)
 	React.Children.forEach(this.props.children, child => console.log(child.props.className))
 	React.Children.only(this.props.children) // expects only a single child
+
+
+Lecture 19: React.Children
+	React.Children do not return the actual children but returns the discription of the children. So if you want to add more functionality to the children, you will have to use cloneElement to create new elements
+
+	- cloneElement takes in an existing description and an object with the additional functionality that we would want to add 
